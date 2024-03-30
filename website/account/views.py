@@ -47,3 +47,9 @@ def home(request):
         return redirect('signin')
     else:
         return render(request, 'home.html')
+
+def news(request):
+    if request.method == 'POST':
+        return redirect('signin')
+    else:
+        return render(request, 'news.html')
