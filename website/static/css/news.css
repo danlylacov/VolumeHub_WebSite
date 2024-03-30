@@ -1,15 +1,24 @@
-
 .container {
-    display: flex; /* Размещение дочерних элементов внутри контейнера */
-    justify-content: center; /* Выравнивание дочерних элементов по центру горизонтально */
-
-    margin-top: 20px;
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    justify-content: center; /* Горизонтальное выравнивание */
+    flex-wrap: wrap; /* Перенос элементов на новую строку, когда не хватает места */
+    margin-top: 5%;
 }
 
 .rectangle {
-    width: 30%; /* Ширина каждого прямоугольника */
-    height: 300px; /* Высота прямоугольника */
+    width: 300px; /* Фиксированная ширина */
+    height: 350px; /* Фиксированная высота */
     background-color: #ffffff; /* Цвет фона */
-    margin: 0 1%; /* Отступ между прямоугольниками */
-    border-radius: 20px;
+    margin: 10px; /* Отступы вокруг прямоугольника */
+    border-radius: 20px; /* Скругление углов */
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: space-around; /* Равномерное распределение прямоугольников с учетом отступов */
+    }
+
+    .rectangle {
+        margin: 10px;
+    }
 }
