@@ -1,0 +1,28 @@
+<!-- templates/signin.html -->
+{% extends 'base.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/signin.css' %}">
+
+
+<div class="container">
+
+    <form method="post" class="signup-form">
+        {% csrf_token %}
+        <label for="username">Логин:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password"><br>
+        {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+        {% endif %}
+        <button type="enter">Войти</button><br><br>
+
+    </form>
+</div>
+
+{% endblock %}

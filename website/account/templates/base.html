@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mervale+Script&display=swap">
+</head>
+<body>
+    <header class="header">
+        <a class="site-title">Volume Hub</a>
+        <nav>
+
+            <ul class="right-menu"> <!-- Изменено на right-menu -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <li><a href="{% url 'home' %}">О проекте</a></li>
+                    <li><a href="{% url 'home' %}">Новости</a></li>
+                    <li><a href="{% url 'home' %}">Уведомления</a></li>
+                    <li><a href="{% url 'home' %}">Настройки</a></li>
+                    <li><button class="lk">Авторизация</button></li>
+                </form>
+                <!-- Добавьте другие кнопки здесь -->
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

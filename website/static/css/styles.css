@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+    background: linear-gradient(to  bottom right, #B490FF, #0500ff); /* Измените цвета градиента по вашему усмотрению */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.header {
+    background-color: #ffffff;
+    color: #ababab;
+    padding: 10px; /* Увеличиваем padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px; /* Увеличиваем отступы */
+    font-size: 16px; /* Уменьшаем размер текста */
+}
+
+nav ul li a:hover {
+    background-color: #e5e5e5;
+    border-radius: 20px;
+}
+
+.lk {
+    background: linear-gradient(to bottom right, #0500FF, #9F3FFF); /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста */
+    padding: 10px 15px; /* Внутренние отступы кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 40px; /* Скругляем углы */
+    border-bottom-right-radius: 100px;
+    cursor: pointer; /* Делаем курсор при наведении */
+    font-size: 16px; /* Уменьшаем размер текста */
+}
+
+.lk:hover {
+    background-color: #002fa6; /* Изменяем цвет фона при наведении */
+}
+
+.site-title {
+    margin: 10px;
+    color: #000000;
+    margin-left: 10px; /* Увеличиваем отступ слева */
+    font-size: 32px; /* Увеличиваем размер текста */
+    font-family: 'Mervale Script', cursive;
+}
+
+.right-menu {
+    margin-right: 10px; /* Увеличиваем отступ справа */
+}
+
+/* Медиа-запросы для адаптивности */
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .lk {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .right-menu {
+        margin-right: 5px;
+    }
+}
+
+
+
+/*--------------------------------------------
+ */
+
+
