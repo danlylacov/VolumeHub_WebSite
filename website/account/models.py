@@ -3,8 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 class CustomUser(AbstractUser):
-    telegram_id = models.BigIntegerField()
-    subscription = models.TimeField(max_length=80)
+    telegram_id = models.BigIntegerField(null=True)
+    subscription = models.TimeField(max_length=80, null=True)
     #photo = models.ImageField()
     # Добавление параметра related_name для избежания конфликта имен
     groups = models.ManyToManyField(
@@ -36,14 +36,16 @@ class CustomUser(AbstractUser):
     time = models.TimeField()"""
 
 
-class UserToNotification(models.Model):
-    user_id = models.BigIntegerField()
-    notification_id = models.BigIntegerField()
 
 
-class ActionSubscription(models.Model):
-    action_id = models.BigIntegerField()
-    Z_deviation = models.FloatField()
+
+
+class News(models.Model):
+    title = models.CharField(max_length=80)
+    photo = models.ImageField(upload_to='static/images', null=True)
+    article = models.TextField()
+    category = models.TextField()
+    time = models.DateTimeField()
 
 
 

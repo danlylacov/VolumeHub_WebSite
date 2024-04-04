@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px; /* Оставляем padding для интерьера, а не margin */
+    box-sizing: border-box; /* Удостоверяемся, что padding включен в высоту и ширину */
+}
+
+.rectangle {
+    width: 97%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.time{
+    font-size: 12px;
+    color: #8a8a8a;
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+
+.news-image {
+    margin: 5px;
+    width: 70%;
+    height: 20%; /* или любая другая высота, которую вы хотите для изображения */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);;
+}
+
+.button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: linear-gradient(to bottom right, #0500FF, #9F3FFF); /* Цвет фона кнопки */
+    padding: 10px;
+    width: 60px;
+    height: 5px;
+    border-radius: 40px;
+    border-bottom-right-radius: 100px;
+    cursor: pointer; /* Делаем курсор при наведении */
+    font-size: 16px;
+}
+
+.to_news {
+    position: absolute;
+    bottom: 3px;
+    left: 13px;
+
+    text-decoration: none;
+    color: #ffffff;
+}

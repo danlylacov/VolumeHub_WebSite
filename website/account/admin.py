@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import CustomUser, UserToNotification, ActionSubscription
+from .models import CustomUser, News
 
 admin.site.register(CustomUser)
-admin.site.register(UserToNotification)
-admin.site.register(ActionSubscription)
+admin.site.register(News)

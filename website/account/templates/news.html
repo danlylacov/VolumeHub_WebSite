@@ -8,8 +8,21 @@
 <link rel="stylesheet" href="{% static 'css/news.css' %}">
 
 <div class="container">
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
-    <div class="rectangle"></div>
+    {% for el in news %}
+        <div class="rectangle">
+
+            <div class="content">{{ el.title }}</div>
+            <div class="time">{{ el.time }}</div>
+            <div class="category">
+                <div class="category_text">{{ el.category }}</div>
+            </div>
+            <div class="news_text">{{ el.article|truncatechars:130 }}</div>
+            <div class="button">
+                <a href="{% url 'show_news' id=el.pk %}" class="to_news">читать</a>
+            </div>
+            <div class="diagonal-image" style='background-image: url(/{{el.photo}})'></div>
+        </div>
+    {% endfor %}
+
 </div>
 {% endblock %}

@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 from .serializers import  UserRegistrationSerializer
+from .models import News
 
 
 
@@ -20,7 +21,19 @@ def news(request):
     if request.method == 'POST':
         return redirect('signin')
     else:
-        return render(request, 'news.html')
+
+        news = News.objects.all()
+        print(news[0].id)
+
+        return render(request, 'news.html', {'news': news})
+
+def show_news(request, id):
+    if request.method == 'POST':
+        return redirect('signin')
+    else:
+        news = News.objects.get(id=id)
+        return render(request, 'show_news.html', {"news": news})
+
 
 def signin(request):
     if request.method == 'POST':
@@ -39,6 +52,9 @@ def signin(request):
             return render(request, 'signin.html', {'error_message': error_message})
     else:
         return render(request, 'signin.html')
+
+
+
 
 
 class UserRegistrationAPIView(APIView):
