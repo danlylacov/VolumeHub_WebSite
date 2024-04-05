@@ -1,4 +1,4 @@
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from rest_framework.views import APIView
@@ -34,6 +34,35 @@ def show_news(request, id):
         news = News.objects.get(id=id)
         return render(request, 'show_news.html', {"news": news})
 
+@login_required
+def settings(request):
+
+    return render(request, 'settings.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------
 
 def signin(request):
     if request.method == 'POST':
@@ -52,6 +81,9 @@ def signin(request):
             return render(request, 'signin.html', {'error_message': error_message})
     else:
         return render(request, 'signin.html')
+
+
+
 
 
 

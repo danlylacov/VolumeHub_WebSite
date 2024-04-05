@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    background: linear-gradient(to  bottom right, #B490FF, #0500ff); /* Измените цвета градиента по вашему усмотрению */
+    background: linear-gradient(to  bottom right, #3f2d55, #040081); /* Измените цвета градиента по вашему усмотрению */
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -41,7 +41,7 @@ nav ul li a:hover {
 }
 
 .lk {
-    background: linear-gradient(to bottom right, #0500FF, #9F3FFF); /* Цвет фона кнопки */
+    background: linear-gradient(to bottom right, #0500ff, #9f3fff); /* Цвет фона кнопки */
     color: #ffffff; /* Цвет текста */
     padding: 10px 15px; /* Внутренние отступы кнопки */
     border: none; /* Убираем границу */

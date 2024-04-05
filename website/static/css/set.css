@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5%;
+}
+
+.rectangle {
+    width: 45%;
+    height: 700px;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.rectangle::before {
+    content: ''; /* Необходимый атрибут для создания псевдоэлемента */
+    position: absolute; /* Позиционирование относительно блока .rectangle */
+    top: 0; /* Позиция сверху */
+    left: 0; /* Позиция слева */
+    right: 0; /* Позиция справа */
+    bottom: 85%; /* Псевдоэлемент будет занимать только верхнюю половину блока .rectangle */
+    background: linear-gradient(to  bottom right, #3715ff, #9d3eff); /* Пример градиента */
+    border-top-left-radius: 20px; /* Скругление углов, чтобы соответствовать .rectangle */
+    border-top-right-radius: 20px; /* Скругление углов, чтобы соответствовать .rectangle */
+}
+
+.heading {
+    position: absolute;
+    top: 100px; /* Расстояние от верха .rectangle */
+    left: 20px; /* Расстояние от левого края .rectangle */
+    color: #FFFFFF; /* Цвет текста */
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирность шрифта */
+    z-index: 2; /* Поверх градиента */
+}

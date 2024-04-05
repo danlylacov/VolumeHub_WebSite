@@ -11,6 +11,7 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('signin/', views.signin, name='signin'),
     path('news/<int:id>/', views.show_news, name='show_news'),
+    path('settings/', views.settings, name='settings'),
     path('api/register/', UserRegistrationAPIView.as_view(), name='api_signup'),
 ]
 
